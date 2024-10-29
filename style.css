@@ -23,7 +23,7 @@ section{
 img{
     width: 215px;
     height: 215px;
-    object-fit: fill;
+    object-fit: cover;
 }
 form{
     display: grid;
