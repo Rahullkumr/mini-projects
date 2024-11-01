@@ -14,6 +14,7 @@ h1{
     display: grid;
     align-items: center;
     justify-content: center;
+    background-color: gray;
  }
  section {
     display: grid;
@@ -28,9 +29,11 @@ p{
 form{
     display: grid;
     gap: 15px;
-    border: 1px dashed blue;
     padding: 10px;
     width: 310px;
+    border: 1px dashed blue;
+    background-color: white;
+
 }
 form div{
     height: 290px;

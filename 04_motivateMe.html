@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Quotes</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            background-color: black;
+        }
+        h1{
+            font-family: 'Times New Roman', Times, serif;
+            color: teal;
+        }
+        .container{
+            background-color: rgb(3, 54, 54);
+            height: 500px;
+            width: 60vw;
+            border: 10px solid white;
+            margin: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .qouteContainer{
+            height: 80%;
+            width: 90%;
+            color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-family: cursive;
+            text-align: center;
+        }
+        button{
+            width: 200px;
+            padding: 20px;
+            font-weight: bold;
+            font-size: 14px;
+            background-color: azure;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1><u>Motivational Quote</u></h1>
+    <div class="container">
+        <div class="qouteContainer"></div>
+    </div>
+    <button>Motivate Me</button>
+
+    <script>
+        let quote = 'Click Button to get motivated';
+        const motivationalQuotes = [
+            "Believe you can and you're halfway there.",
+            "How dare you say, it's impossible",
+            "Don't watch the clock; do what it does. Keep going.",
+            "The only way to do great work is to love what you do.",
+            "Your limitation is only your imagination.",
+            "Push yourself, because no one else is going to do it for you.",
+            "Great things never come from comfort zones.",
+            "Dream it. Wish it. Do it.",
+            "Success doesn't just find you. You have to go out and get it.",
+            "The harder you work for something, the greater you'll feel when you achieve it.",
+            "Dream bigger. Do bigger.",
+            "Don't stop when you're tired. Stop when you're done.",
+            "Wake up with determination. Go to bed with satisfaction.",
+            "Do something today that your future self will thank you for.",
+            "Little things make big days.",
+            "It's going to be hard, but hard does not mean impossible.",
+            "Don't wait for opportunity. Create it.",
+            "Sometimes we're tested not to show our weaknesses, but to discover our strengths.",
+            "The key to success is to focus on goals, not obstacles.",
+            "Dream big, stay positive, work hard, and enjoy the journey."
+        ];
+
+        let qouteContainer = document.querySelector('.qouteContainer');
+        let motivatebtn = document.querySelector('button')      
+        qouteContainer.innerText = quote;
+        motivatebtn.addEventListener('click', ()=>{
+            quote = motivationalQuotes[Math.floor(Math.random()*21)];
+            qouteContainer.innerText = quote;
+        });
+
+    </script>
+</body>
+</html>
