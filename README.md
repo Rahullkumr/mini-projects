@@ -8,3 +8,5 @@
 
 4. [Motivational Quotes](https://rahullkumr.github.io/mini-projects/04_motivateMe.html)
 
+5. [Tap To Reveal](https://rahullkumr.github.io/mini-projects/05_tapToReveal.html)
+
