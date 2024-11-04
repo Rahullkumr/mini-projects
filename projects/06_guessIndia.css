@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: black;  
+    overflow: hidden;  
+}
+h1{
+    display: none;
+}
+.container{
+    margin-left: 350px;
+    height: 850px;
+    background-image: url('../images/06_guessIndia.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid red;
+}
+
+/* restriction for mobile devices */
