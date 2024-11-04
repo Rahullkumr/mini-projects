@@ -21,3 +21,20 @@ h1{
 }
 
 /* restriction for mobile devices */
+@media only screen and (max-width: 500px) {
+    h1 {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+    }
+    .container{
+        display: none;
+    }
+    body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+}
