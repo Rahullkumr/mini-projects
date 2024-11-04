@@ -47,7 +47,8 @@ To run these projects locally, follow these steps:
 5. **[Tap To Reveal](https://rahullkumr.github.io/js-mini-projects/projects/05_tapToReveal.html)**  
    A fun and interactive project featuring a living room. Click on the objects within the room to reveal their names. This project helped me understand CSS z-index property along with DOM manipulation and event listeners.
 
-6. **[under construction]**
+6. **[Guess India Game](https://rahullkumr.github.io/js-mini-projects/projects/06_guessIndia.html)** 
+   [under construction]
 
 <br/><br/>
 --- 
