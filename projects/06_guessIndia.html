@@ -4,60 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indian States and UTs Guessing Game</title>
-    <link rel="stylesheet" href="./06_guessIndia.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            background-color: black;  
+        }
+
+        /* h1 for restricting mobile devices */
+        h1{
+            display: none;
+        }
+
+        /* map container */
+        .container{
+            margin-left: 350px;
+            height: 850px;
+            background-image: url('../images/06_guessIndia.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        /* TODO: style input box and move it above media queries*/
+        #inputbox{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            position: fixed;
+            top: 200px;
+            left: 30px;
+            height: 200px;
+            width: 250px;
+            border-radius: 10px;    
+            background-color: whitesmoke;
+            input{
+                height: 35px;
+                padding: 10px;
+                width: 80%;    
+                outline-color: #d28b08;   
+            }
+            input::placeholder{
+                text-align: center;
+            }
+            button{
+                padding: 5px 20px;
+            }
+        }
+
+        /* restriction for mobile devices */
+        @media only screen and (max-width: 500px) {
+            body{
+                display: flex;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+            }   
+            h1 {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 10px;
+            }         
+            .container, #inputbox{
+                display: none;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+    </style>
 </head>
 <body>
-    <h1>This project is not supported on mobile devices</h1>
+    <h1>This project is not supported on mobile devices.</h1>
     <div class="container"> </div>
 
-    <div class="deleteme" style="color: white; position: absolute; top: 100px; left: 100px;"></div>
+    <!-- create a input box -->
+    <div id="inputbox">
+        <h3>0/36 Names Correct</h3>
+        <p style="font-size: 11px; margin-top: -20px;">28 states and 8 UTs</p>
+        <input type="text" placeholder="Guess Another Name">
+        <button>Let's Go</button>
+    </div>
+
+    <!--TODO: delete this at the end  -->
+    <div class="deleteme" style="color: white; position: absolute; top: 100px; left: 100px;">
+        28 states and 8 UTs
+    </div>
     
     <!-- 28 states and 8 UTs -->
-    <script>
-        const statesAndUTs = {
-            "Andhra Pradesh": [615, 615],
-            "Arunachal Pradesh": [980, 240],
-            "Assam": [960, 286],
-            "Bihar": [781, 318],
-            "Chhattisgarh": [691, 439],
-            "Goa": [500, 588],
-            "Gujarat": [427, 392],
-            "Haryana": [565, 221],
-            "Himachal Pradesh": [581, 149],
-            "Jharkhand": [767, 368],
-            "Karnataka": [520, 615],
-            "Kerala": [557, 729],
-            "Madhya Pradesh": [587, 383],
-            "Maharashtra": [506, 485],
-            "Manipur": [988, 331],
-            "Meghalaya": [909, 312],
-            "Mizoram": [963, 364],
-            "Nagaland": [1000, 284],
-            "Odisha": [752, 453],
-            "Punjab": [530, 177],
-            "Rajasthan": [471, 287],
-            "Sikkim": [863, 279],
-            "Tamil Nadu": [603, 709],
-            "Telangana": [606, 539],
-            "Tripura": [937, 358],
-            "Uttar Pradesh": [650, 285],
-            "Uttarakhand": [633, 194],
-            "West Bengal": [827, 381],
-
-            "Andaman and Nicobar Islands": [902, 653],
-            "Chandigarh": [574, 182],
-            "Dadra and Nagar Haveli and Daman and Diu": [385, 478],
-            "Lakshadweep": [432, 721],
-            "Delhi": [587, 237],
-            "Puducherry": [653, 667],
-            "Jammu and Kashmir": [522, 106],
-            "Ladakh": [571, 62]
-        }
-        const container = document.querySelector('.container');
-        const deleteme = document.querySelector('.deleteme');
-        container.addEventListener('click', (e)=>{
-            deleteme.innerText = `${e.clientX}, ${e.clientY}`;
-        });
-    </script>
+    <script src="./06_guessIndia.js"></script>
 </body>
 </html>
