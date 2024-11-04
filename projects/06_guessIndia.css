@@ -6,7 +6,6 @@
 }
 body{
     background-color: black;  
-    overflow: hidden;  
 }
 h1{
     display: none;
@@ -14,10 +13,10 @@ h1{
 .container{
     margin-left: 350px;
     height: 850px;
-    background-image: url('../images/06_guessIndia.webp');
+    background-image: url('../images/06_guessIndia.png');
     background-repeat: no-repeat;
     background-size: contain;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 /* restriction for mobile devices */
@@ -37,4 +36,9 @@ h1{
         justify-content: center;
         align-items: center;
     }
+}
+
+/* Hide scrollbar */
+::-webkit-scrollbar {
+    display: none;
 }
