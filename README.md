@@ -40,27 +40,27 @@ To run these projects locally, follow these steps:
 
    This project is a clone of the Amazon website. It uses flexbox layout to organize the elements on the page.
 
-3. **[Calendar](https://rahullkumr.github.io/mini-projects/projects/01_calendar.html)** 
+3. **[Calendar](https://rahullkumr.github.io/mini-projects/projects/03_calendar.html)** 
 
    A simple calendar showcasing the last three months of 2024. This project demonstrates the use of CSS transform properties combined with flexbox and grid layout techniques.
 
-4. **[Background Color Changer](https://rahullkumr.github.io/mini-projects/projects/02_bgchanger.html)**  
+4. **[Background Color Changer](https://rahullkumr.github.io/mini-projects/projects/04_bgchanger.html)**  
 
    A simple project to change the background color with a single click. Learnt how to manipulate CSS properties using JavaScript.
 
-5. **[Color Picker Background Changer](https://rahullkumr.github.io/mini-projects/projects/03_colorPicker.html)**  
+5. **[Color Picker Background Changer](https://rahullkumr.github.io/mini-projects/projects/05_colorPicker.html)**  
 
    Use a color picker tool to dynamically change the background color. This project introduced me with HTML5 color input types.
 
-6. **[Motivational Quotes](https://rahullkumr.github.io/mini-projects/projects/04_motivateMe.html)**  
+6. **[Motivational Quotes](https://rahullkumr.github.io/mini-projects/projects/06_motivateMe.html)**  
 
    Display random motivational quotes to inspire throughout the day. This project helped me understand DOM manipulation.
 
-7. **[Tap To Reveal](https://rahullkumr.github.io/mini-projects/projects/05_tapToReveal.html)**  
+7. **[Tap To Reveal](https://rahullkumr.github.io/mini-projects/projects/07_tapToReveal.html)**  
 
    A fun and interactive project featuring a living room. Click on the objects within the room to reveal their names. This project helped me understand CSS z-index property along with DOM manipulation and event listeners.
 
-8. **[Guess India Game](https://rahullkumr.github.io/mini-projects/projects/06_guessIndia.html)** 
+8. **[Guess India Game](https://rahullkumr.github.io/mini-projects/projects/08_guessIndia.html)** 
 
    This is an interactive game where users attempt to name all 28 states and 8 Union Territories (UTs) of India. The program will show an image of the map of India and ask users to input states and UTs names. If a correct name is entered, it will be displayed on the map. The game also generates an output with the names of any states the player missed.
 
