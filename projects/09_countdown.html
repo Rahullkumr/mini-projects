@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown timer</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            height: 100vh;
+            background-color: cornsilk;
+            flex-direction: column;
+        }
+        .container{
+            padding: 50px;
+            gap: 20px;
+        }
+        body, .container, .rightSection, .leftSection, .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .leftSection, .rightSection{
+            height: 400px;
+            width: 400px;
+            border: 1px solid green;
+            background-color: #fff;
+            h1{
+                font-size: 3.5rem;
+                color: magenta;
+            }
+        }
+        .box{
+            flex-direction: column;
+            gap: 20px;
+        }
+        select{
+            text-align: center;
+        }
+        button,select{
+            width: 200px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        @media (max-width: 500px) {
+            .leftSection, .rightSection{
+                height: 150px;
+                width: 150px;
+                h1{
+                    font-size: 1.5rem;
+                }
+            }
+            button,select{
+                width: 120px;
+                padding: 5px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="color: blue;">Count Down Timer</h1>
+    <div class="container">
+        <section class="leftSection">
+            <div class="box">
+                <select name="" id="selectedTime">
+                    <option value="0">Select Time</option>
+                    <option value="5">5 sec</option>
+                    <option value="10">10 sec</option>
+                    <option value="30">30 sec</option>
+                    <option value="60">1 min</option>
+                </select>
+                <button>Let's Go ➡️</button>
+            </div>
+        </section>
+        <section class="rightSection">
+            <h1 id="timerHeading">Select Time</h1>
+        </section>
+    </div>
+    <script defer>
+        let button = document.querySelector('button')
+        let timerHeading = document.getElementById('timerHeading')
+        button.addEventListener('click',(e)=>{
+            let selectedTime = Number(document.getElementById('selectedTime').value);
+            if(selectedTime !== 0){
+                let count = selectedTime;
+                let stopMe = setInterval(()=>{
+                    timerHeading.innerText = count;
+                    if(count === 0){
+                        clearInterval(stopMe);
+                    }
+                    count--;
+                }, 1000);
+            }
+        });
+        
+    </script>
+</body>
+</html>
