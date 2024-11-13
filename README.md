@@ -66,7 +66,11 @@ To run these projects locally, follow these steps:
 
 9. **[Count Down Timer](https://rahullkumr.github.io/mini-projects/projects/09_countdown.html)** 
 
-   You can select time and start countdown timer. This project uses html div tags, css styling properties with flexbox layout and JS's setInterval hof.
+   You can select time and start countdown timer. This project uses html div tags, css styling properties with flexbox layout and JS's `setInterval()` hof.
+
+10. **[Learn Numbers](https://rahullkumr.github.io/mini-projects/projects/10_learnNumbers.html)** 
+
+   You can learn English, Hindi, Marathi and Spanish numbers using this project. The project uses html div tags, css styling properties with flexbox layout and JS's `setInterval()` hof.
 
 <br/><br/>
 --- 

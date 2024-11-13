@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Numbers</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            gap: 50px;
+        }
+        .container{
+            height: 50vh;
+            width: 80vw;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid;
+                color: white;
+                font-size: 2rem;
+            box-shadow: 5px 5px 5px gray;
+
+            }
+            .english{
+                background-color: #1e88e5;
+            }
+            .hindi{
+                background-color: #673ab7;
+            }
+            .marathi{
+                background-color: #1e88e5;
+            }
+            .spanish{
+                background-color: #673ab7;
+            }
+        }
+        button{
+            width: 50%;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            box-shadow: 5px 5px 5px gray;
+        }
+        @media (max-width: 500px) {
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="english">English numbers</div>  
+        <div class="hindi">Hindi numbers</div>
+        <div class="marathi">Marathi numbers</div>
+        <div class="spanish">Spanish numbers</div>
+    </div>
+    <button>Click to Start</button>
+    <script>
+        let english = document.querySelector('.english')
+        let hindi = document.querySelector('.hindi')
+        let marathi = document.querySelector('.marathi')
+        let spanish = document.querySelector('.spanish')
+        let btn = document.querySelector('button')
+        let englishNumbers = ['1 one', '2 two', '3 three', '4 four', '5 five', '6 six', '7 seven', '8 eight', '9 nine', '10 ten'];
+        let hindiNumbers = ['१ एक (ek)', '२ दो (do)', '३ तीन (tin)', '४ चार (char)', '५ पांच (panch)', '६ छह (chah)', '७ सात (saat)', '८ आठ (aath)', '९ नौ (nau)', '१० दस (das)'];
+        let marathiNumbers = ['१ एक (ek)', '२ दोन (don)', '३ तीन (teen)', '४ चार (char)', '५ पाच (pach)', '६ सहा (saha)', '७ सात (saat)', '८ आठ (aath)', '९ नऊ (nau)', '१० दहा (daha)'];
+        let spanishNumbers = ['uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez']
+
+
+        btn.addEventListener('click', ()=>{
+            btn.disabled = true;
+            let count = 0;
+            english.innerText = englishNumbers[count];
+            hindi.innerText = hindiNumbers[count];
+            marathi.innerText = marathiNumbers[count];
+            spanish.innerText = spanishNumbers[count];
+            let forStopingInterval = setInterval(() => {
+                count++;
+                if (count === englishNumbers.length){
+                    english.innerText = 'English numbers';
+                    hindi.innerText = 'Hindi numbers';
+                    marathi.innerText = 'Marathi numbers';
+                    spanish.innerText = 'Spanish numbers';
+                    btn.disabled = false;
+                    clearInterval(forStopingInterval);
+                }else{
+                    english.innerText = englishNumbers[count];
+                    hindi.innerText = hindiNumbers[count];
+                    marathi.innerText = marathiNumbers[count];
+                    spanish.innerText = spanishNumbers[count];
+                }   
+            }, 3000);
+        });
+
+        // change content after a particular second
+
+        // btn.addEventListener('click', ()=>{
+        //     setTimeout(() => {
+        //         english.innerText = 'after 2 sec';
+        //     }, 2000);
+
+        //     setTimeout(() => {
+        //         hindi.innerText = 'after 4 sec';
+        //     }, 4000);
+
+        //     setTimeout(() => {
+        //         marathi.innerText = 'after 5 sec';
+        //     }, 5000);
+
+        //     setTimeout(() => {
+        //         spanish.innerText = 'after 7 sec';
+        //     }, 7000);
+        // });
+    </script>
+</body>
+</html>
