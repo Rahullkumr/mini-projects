@@ -86,6 +86,7 @@
         let button = document.querySelector('button')
         let timerHeading = document.getElementById('timerHeading')
         button.addEventListener('click',(e)=>{
+            button.disabled = true;
             let selectedTime = Number(document.getElementById('selectedTime').value);
             if(selectedTime !== 0){
                 let count = selectedTime;
