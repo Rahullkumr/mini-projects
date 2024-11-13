@@ -64,6 +64,10 @@ To run these projects locally, follow these steps:
 
    This is an interactive game where users attempt to name all 28 states and 8 Union Territories (UTs) of India. The program will show an image of the map of India and ask users to input states and UTs names. If a correct name is entered, it will be displayed on the map. The game also generates an output with the names of any states the player missed.
 
+9. **[Count Down Timer](https://rahullkumr.github.io/mini-projects/projects/09_countdown.html)** 
+
+   You can select time and start countdown timer. This project uses html div tags, css styling properties with flexbox layout and JS's setInterval hof.
+
 <br/><br/>
 --- 
 <h1 align='center'>Happy coding!</h1>
